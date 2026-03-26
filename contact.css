@@ -1,0 +1,87 @@
+/* Start of contact page */
+
+#contact-box {
+    border: 3px solid black;
+    width: 700px;
+    height: 100%;
+    object-position: top;
+    border-radius: 10%;
+}
+
+#contact-text {
+    color: black;
+}
+
+#social-text {
+    width: 800px;
+    height: auto;
+    margin: 0px;
+    border: 3px solid black;
+    border-radius: 5%;
+}
+
+.main-flex2 {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 350px;
+    width: 800px;
+    height: 500px;
+    justify-content: center;
+    border-radius: 5%;
+    background-color: #92ac9f;
+
+    /* gap: 900px */
+}
+
+#body-background2 {
+    background-image: url("blue gradient.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#contact-list {
+    display: flex;
+    height: auto;
+    list-style-type: none;
+    font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#insta-photo {
+    height: 30px;
+    border-radius: 60%;
+}
+
+#gmail-photo {
+    height: 30px;
+    border-radius: 60%;
+}
+
+#handshake-photo {
+    height: 25px;
+    border-radius: 60%;
+}
+
+#chess-photo {
+    height: 30px;
+    border-radius: 60%;
+}
+
+#insta {
+    padding: 30px;
+}
+
+#gmail {
+    padding: 30px;
+}
+
+#handshake {
+    padding: 30px;
+}
+
+#chess {
+    padding: 30px;
+}
