@@ -1,49 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="styles.css"/>
         <meta charset="utf-8" />
         <title>Caronn's Website</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div id="body-background">
-            <h1>Caronn's Website</h1>
             <header>
                 <div class="divheader">
-                    <div>
-                        <div>
-                            <a href="#">Home</a>
-                            <a href="https://www.betterhelp.com/">HELP ME</a>
-                        </div>
-                        <div id="frame">
-                            <img
-                                id="ash-baby"
-                                src="ash-baby.webp"
-                                alt="An image of ash baby"
-                            />
-                        </div>
-
-                        <div>
-                            <a href="https://students.washington.edu/caronn07/Cse_195/contact.html"
-                                >Contact</a
-                            >
-                            <a href="https://students.washington.edu/caronn07/Website/calculator.html">My Calculator</a>
-                        </div>
-                    </div>
+                    <ul id="nav-items">
+                        <li><strong class="hover-underline-animation center">Home</strong></li>
+                        <li><strong class="hover-underline-animation center">About</strong></li>
+                        <li><strong class="hover-underline-animation center">Skills</strong></li>
+                        <li><strong class="hover-underline-animation center">Projects</strong></li>
+                        <li><strong class="hover-underline-animation center">Contact</strong></li>
+                    </ul>
+                    <ul id = "contact-icons">
+                        <li>
+                            <a href = "https://github.com/browncar2007">    
+                                <img
+                                class = "header-icons"
+                                src = "Photos/github-logo.svg"
+                                alt = "github logo"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "https://www.linkedin.com/in/caronn-brown-77862b28a/">    
+                                <img
+                                class = "header-icons"
+                                src = "Photos/linkedin-logo.svg"
+                                alt = "linkedin logo"
+                                />
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "Documents/Group Project Reflection.pdf" download = "resume.pdf">    
+                                <img
+                                class = "header-icons"
+                                src = "Photos/download-icon.png"
+                                alt = "download icon"
+                                />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </header>
-
             <main>
+                <section id = "hero-background">
+                    <div id = "hero-flex">
+                        <h1> Hi, I'm <span id= "name">Caronn</span></h1>
+
+                        <div class="card">
+                            <div class="loader">
+                                <p>I am a </p>
+                                <div class="words">
+                                <span class="word"></span>
+                                <span class="word">Team Leader</span>
+                                <span class="word">Fast Learner</span>
+                                <span class="word">Programmer</span>
+                                <span class="word">Software Developer</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>
+                            A CS student at the University of Washington<br>
+                             building toward a future in tech.
+                        </h2>
+                    </div>  
+                </section>
+
                 <div class="main-flex">
                     <img
                         id="prof-photo"
-                        src="/Users/caronnbrown/Desktop/VSCode Projects/Personal Website/Photos/professional-photo.jpg"
+                        src="Photos/professional-photo.jpg"
                         alt="A professional headshot of me"
                     />
                     <div id="gap"></div>
                     <div id="bio">
-                        <h2>About Me</h2>
-                        <p id="bio-textbox">
+                        <h2 class ="bio-textbox">About Me</h2>
+                        <p class="bio-textbox">
                             My name is <strong>Caronn Brown</strong>, and I use
                             he/him pronouns. I am currently a first-year Allen
                             Scholar at the University of Washington, pursuing a
@@ -57,7 +98,7 @@
                             to work diligently and remain committed to my
                             studies.
                         </p>
-                        <p id="bio-textbox2">
+                        <p class="bio-textbox">
                             Outside of academics, I have a wide range of hobbies
                             that keep me balanced and motivated. I played
                             varsity baseball and varsity golf in high school,
@@ -75,19 +116,12 @@
                         </p>
                     </div>
                 </div>
-                <div id="contact">
-                    <a
-                        id="contact-text"
-                        href="https://students.washington.edu/caronn07/photo-journal/photo-journal.html"
-                        ><h3>Photo Journal</h3></a
-                    >
-                </div>
                 <div id="backround-change">
                     <h2 id="fix">Me</h2>
                     <div id="flex-fix">
                         <img
                             id="topic-image1"
-                            src="museum-photo.jpg"
+                            src="Photos/github-logo.svg"
                             alt="a photo of me walking through a museum photo"
                         />
                         <img
@@ -107,7 +141,7 @@
         <footer>
             <img
                 id="footer-image"
-                src="washington-huskies-logo.png"
+                src="Photos/washington-huskies-logo.png"
                 alt="an image huskey logo"
             />
             <p id="footertext">
@@ -115,5 +149,6 @@
                 cited in document or page source
             </p>
         </footer>
+    <script src="script.js"></script>
     </body>
 </html>

@@ -1,50 +1,236 @@
-.divheader div {
-    display: flex;
-    background-color: #79c2d0;
-    padding: 0px;
-    margin: 0px;
-    border: 2px solid black;
-    justify-content: space-between;
+html {
+    height: 100%;
+    width: 100%;
 }
 
-body h1 {
+main {
+    background-color: #393E46;
+}
+
+header {
+    background-color: #393E46;
+    font-size: 20px;
+    font-weight: 400;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: #6D9886; /* whatever color you want when scrolled */
+}
+
+.divheader {
     display: flex;
-    color: black;
+    align-items:center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.divheader ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;  
+}
+
+.divheader li {
+    color: #F7F7F7;
+    list-style: none;
+    text-decoration: none;
+    padding: 30px 20px;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    transition: color 0.25s ease-out;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #c6c1b1;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation.center::after {
+    transform-origin: bottom center;
+}
+
+.hover-underline-animation.center:hover {
+    color: #6D9886;
+}
+
+.hover-underline-animation.center:hover::after {
+    transform-origin: bottom center;
+    transform: scaleX(1);
+}
+
+#contact-icons {
+    padding-right: 30px;
+    margin-left: auto;
+}
+
+#hero-background {
+    display: flex;
     justify-content: center;
-    background-color: rgba(49, 108, 185, 0.405);
+    height: 800px;
+    background-color: #393E46;
+}
+
+#hero-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: fit-content;
+    /* border: 2px dashed white; */
+    padding-top: 40px;
+    padding-right: 200px;
+}
+
+#hero-flex h1 {
+    font-size: 5.0rem;
+    color: #F7F7F7;
+}
+
+#hero-flex #name{
+    padding: 5px;
+    color:#6D9886
+
+}
+
+.loader p {
+    margin: 0;
+}
+
+/* From Uiverse.io by kennyotsu */ 
+.card {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #393E46;
+  background-color: var(--bg-color);
+  /* padding: 1rem 2rem; */
+  border-radius: 1.25rem;
+}
+.loader {
+  color: #F7F7F7;
+  opacity: 80%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 15%,
+    transparent 80%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #6D9886;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+
+#hero-flex h2 {
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 35px;
+    opacity: 65%;
 }
 
 body {
     margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Archivo', sans-serif;
+    color: #F7F7F7;
 }
 
-a {
-    color: #3e43c8;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
+.divheader img {
+    padding: 0px 5px;
+    max-width: 30px;
+    height: 100%;
 }
 
-.divheader a:hover {
-    background-color: #5585b5;
-}
-
-#ash-baby {
-    margin: 0px;
-    width: 70px;
-    height: 70px;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 50%;
-}
 
 #frame {
     width: 100%;
     height: 100%;
     object-fit: cover;
     justify-content: center;
-    border: 2px solid black;
+    border: 2px solid #c6c1b1;
 }
 
 h1 {
@@ -54,24 +240,24 @@ h1 {
 .main-flex {
     display: flex;
     margin: 50px;
-    width: 100%;
+    width: calc(100% - 100px); /* subtract left + right margin */
     height: 400px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 #prof-photo {
-    border: 3px solid black;
+    border: 3px solid #c6c1b1;
     width: 350px;
     height: 100%;
     object-fit: cover;
     object-position: top;
-    margin-left: 150px;
     border-radius: 10%;
 }
 
 #body-background {
-    background-color: #6c7e75;
+    background-color: #F7F7F7;
+    flex: 1; /* grows to fill remaining space, pushing footer to bottom */
 }
 
 #gap {
@@ -79,20 +265,15 @@ h1 {
 }
 
 #bio {
-    margin-right: 250px;
     height: 100%;
     overflow: auto;
-    border: 1px solid black;
-    width: 500px;
+    border: 1px solid #c6c1b1;
+    max-width: 500px;
     border-radius: 5%;
-    background-color: #92ac9f;
+    background-color: #6D9886;
 }
 
 #bio-textbox {
-    padding: 25px;
-}
-
-#bio-textbox2 {
     padding: 25px;
 }
 
@@ -101,26 +282,6 @@ h1 {
     justify-content: center;
     margin: 0px;
     padding-top: 15px;
-}
-
-#contact {
-    text-align: center;
-    justify-content: center;
-    text-decoration: none;
-    display: block;
-    border: 1px solid black;
-    max-width: 100px;
-    margin-left: 1050px;
-    background-color: #92ac9f;
-}
-
-#contact a:hover {
-    background-color: #656869;
-}
-
-#backround-change {
-    margin: 0px;
-    background-color: #79c2d0;
 }
 
 #fix {
